@@ -4,5 +4,11 @@
   "main": "src/index.js",
   "repository": "https://github.com/UsboKirishima/lived/",
   "author": "UsboKirishima <usbertibox@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "classeviva.js": "^1.2.0",
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.1",
+    "node-fetch": "^3.2.3"
+  }
 }
