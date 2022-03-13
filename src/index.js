@@ -1,6 +1,7 @@
 const { Classeviva } = require('classeviva.js');
 const inquirer = require('inquirer');
 const colors = require('colors');
+const { grades } = require('./commands/grades')
 
 colors.enable();
 
@@ -12,19 +13,9 @@ const program = async () => {
         const cv = new Classeviva(username, pw);
         cv.login();
         let command = await chooseCommands();
+        let votes = '';
 
-        if(command.toLowerCase().includes('voti')) {
-            cv.getGrades().then(grades => {
-                grades.forEach(({ 
-                    subjectDesc,
-                    displayValue,
-                    color
-                 }) => {
-                    console.log(displayValue);
-                });
-            })
-        }
-
+        await grades(cv, command);
     } catch(error) {
         console.log(colors.bgRed.white(' ERROR ') + " " + error);
     }
