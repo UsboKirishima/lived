@@ -1,0 +1,8 @@
+{
+  "name": "lived",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/UsboKirishima/lived/",
+  "author": "UsboKirishima <usbertibox@gmail.com>",
+  "license": "MIT"
+}
