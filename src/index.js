@@ -14,7 +14,15 @@ const program = async () => {
         let command = await chooseCommands();
 
         if(command.toLowerCase().includes('voti')) {
-            cv.getGrades().then(grades => console.log(grades))
+            cv.getGrades().then(grades => {
+                grades.forEach(({ 
+                    subjectDesc,
+                    displayValue,
+                    color
+                 }) => {
+                    console.log(displayValue);
+                });
+            })
         }
 
     } catch(error) {
