@@ -1,7 +1,10 @@
 const { Classeviva } = require('classeviva.js');
 const inquirer = require('inquirer');
 const colors = require('colors');
-const { grades } = require('./commands/grades')
+const { categories } = require('./costants');
+const { grades } = require('./commands/grades');
+const { subjects } = require('./commands/subjects');
+const { absences } = require('./commands/absences');
 
 colors.enable();
 
@@ -15,7 +18,20 @@ const program = async () => {
         let command = await chooseCommands();
         let votes = '';
 
-        await grades(cv, command);
+        switch(command) {
+            case 'Voti':
+                await grades(cv, command);
+            break;
+            case 'Materie':
+                await subjects(cv, command);
+            break;
+            case 'Assenze':
+                await absences(cv, command);
+            break;
+            default: 
+                console.log('error');
+            break;
+        }
     } catch(error) {
         console.log(colors.bgRed.white(' ERROR ') + " " + error);
     }
@@ -59,13 +75,12 @@ const program = async () => {
  * @description Choose a command.
  */
    const chooseCommands = async () => {
-    const commands = ['Voti', 'Note', 'Assenze'];
     const { chooseCommands } = await inquirer.prompt([
       {
         type: "list",
         name: "chooseCommands",
-        message: "Please select what you want to do",
-        choices: [...commands, new inquirer.Separator()],
+        message: "Dove vuoi andare?",
+        choices: [...categories, new inquirer.Separator()],
       },
     ]);
   

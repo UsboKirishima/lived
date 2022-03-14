@@ -1,13 +1,11 @@
 const grades = async (cv, command) => {
-    if(command.toLowerCase().includes('voti')) {
-        cv.getGrades().then((grades) => {
-            let votes = '';
-            grades.map(opt => {
-                votes += ` ${opt.displayValue}`
-            })
-            console.log(votes);
+    cv.getGrades().then((grades) => {
+        let votes = '';
+        grades.map(opt => {
+            votes += `\n ${opt.subjectDesc} - ${opt.displayValue}`
         })
-    }
+        console.log(votes);
+    })
 
 }
 
