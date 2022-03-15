@@ -1,6 +1,6 @@
 {
   "name": "lived",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "repository": "https://github.com/UsboKirishima/lived/",
   "author": "UsboKirishima <usbertibox@gmail.com>",
@@ -10,5 +10,8 @@
     "colors": "^1.4.0",
     "inquirer": "^8.2.1",
     "node-fetch": "^3.2.3"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }
