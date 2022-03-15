@@ -56,12 +56,12 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-classeviva.js@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/classeviva.js/-/classeviva.js-1.2.0.tgz#528d327d063c741e8f43b0c47f0b45a8726ede33"
-  integrity sha512-0bRfnwPiKTCR60NpDbljkPA2IGYu4TiAjDh8Fn9ukmCHTrRIva0/mNSbbNheJR279ENopJGwhLUgYWhWAEtQKQ==
+classeviva.js@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/classeviva.js/-/classeviva.js-2.0.1.tgz#be672c40173c102e2ac100782e7923d59eba8753"
+  integrity sha512-pM+Ju+XL03tS2RU+OysZVUqrv9Xj07aUt1nd9iNoj7Q/nrLgt/XSjBOWCY60tFfN2qBwNya0kxMx0RSKms9ckg==
   dependencies:
-    node-fetch "^2.6.6"
+    node-fetch "^2.6.7"
 
 cli-cursor@^3.1.0:
   version "3.1.0"
@@ -240,7 +240,7 @@ node-domexception@^1.0.0:
   resolved "https://registry.yarnpkg.com/node-domexception/-/node-domexception-1.0.0.tgz#6888db46a1f71c0b76b3f7555016b63fe64766e5"
   integrity sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==
 
-node-fetch@^2.6.6:
+node-fetch@^2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
