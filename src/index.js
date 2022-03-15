@@ -5,33 +5,23 @@ const { categories } = require('./costants');
 const { grades } = require('./commands/grades');
 const { subjects } = require('./commands/subjects');
 const { absences } = require('./commands/absences');
+const { notes } = require('./commands/notes');
 
 colors.enable();
 
 
 const program = async () => {
     try {
+        await console.clear();
         let username = await login_username();
         let pw = await login_pw();
         const cv = new Classeviva(username, pw);
         cv.login();
+        await console.clear();
         let command = await chooseCommands();
         let votes = '';
-
-        switch(command) {
-            case 'Voti':
-                await grades(cv, command);
-            break;
-            case 'Materie':
-                await subjects(cv, command);
-            break;
-            case 'Assenze':
-                await absences(cv, command);
-            break;
-            default: 
-                console.log('error');
-            break;
-        }
+        await execCommand(cv, command);
+        
     } catch(error) {
         console.log(colors.bgRed.white(' ERROR ') + " " + error);
     }
@@ -53,6 +43,38 @@ const program = async () => {
         return login_username;
    };
 
+
+   const execCommand = async (cv, command) => {
+    switch(command) {
+        case 'Voti':
+            await grades(cv, command);
+            /*setTimeout(async function() {
+                chooseCommands();
+                await execCommand(cv, command);
+            }, 2000);*/
+        break;
+        case 'Materie':
+            await subjects(cv, command);
+            /*setTimeout(async function() {
+                chooseCommands();
+                await execCommand(cv, command);
+            }, 2000);*/
+        break;
+        case 'Assenze':
+            await absences(cv, command);
+            /*setTimeout(async function() {
+                chooseCommands();
+                await execCommand(cv, command);
+            }, 2000);*/
+        break;
+        case 'Note':
+            await notes(cv, command);
+        break;
+        default: 
+            console.log('error');
+        break;
+    }
+   };
 
      /**
  * @method login_pw
@@ -83,10 +105,9 @@ const program = async () => {
         choices: [...categories, new inquirer.Separator()],
       },
     ]);
-  
     return chooseCommands;
   };
 
 program();
 
-module.export = { program };
+module.exports = { program };
