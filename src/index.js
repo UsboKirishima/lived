@@ -7,6 +7,7 @@ const { subjects } = require('./commands/subjects');
 const { absences } = require('./commands/absences');
 const { notes } = require('./commands/notes');
 const { ui } = require('./ui/ui');
+//const Utils = require('./utils/Utils');
 
 colors.enable();
 
