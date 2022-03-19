@@ -6,12 +6,13 @@
   "author": "UsboKirishima <usbertibox@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "blessed": "^0.1.81",
     "classeviva.js": "^2.0.1",
     "colors": "^1.4.0",
     "inquirer": "^8.2.1",
     "node-fetch": "^3.2.3"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }

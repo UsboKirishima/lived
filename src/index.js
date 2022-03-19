@@ -6,6 +6,7 @@ const { grades } = require('./commands/grades');
 const { subjects } = require('./commands/subjects');
 const { absences } = require('./commands/absences');
 const { notes } = require('./commands/notes');
+const { ui } = require('./ui/ui');
 
 colors.enable();
 
@@ -70,6 +71,8 @@ const program = async () => {
         case 'Note':
             await notes(cv, command);
         break;
+        case 'GUI': 
+            await ui();
         default: 
             console.log('error');
         break;
