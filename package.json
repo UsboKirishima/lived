@@ -10,7 +10,7 @@
     "classeviva.js": "^2.0.1",
     "colors": "^1.4.0",
     "inquirer": "^8.2.1",
-    "node-fetch": "^3.2.3"
+    "node-fetch": "^3.2.10"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
