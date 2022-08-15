@@ -61,10 +61,10 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-classeviva.js@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/classeviva.js/-/classeviva.js-2.0.1.tgz#be672c40173c102e2ac100782e7923d59eba8753"
-  integrity sha512-pM+Ju+XL03tS2RU+OysZVUqrv9Xj07aUt1nd9iNoj7Q/nrLgt/XSjBOWCY60tFfN2qBwNya0kxMx0RSKms9ckg==
+classeviva.js@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/classeviva.js/-/classeviva.js-3.0.0.tgz#9c45f3c016d2979dc38b4c40052ed89ac0c21dd5"
+  integrity sha512-p1DhSwPKr9fbkNfV4U2q7PhqA2bfcJi06gYVUSiOLABHXviUOZDk8ZYEMHfEqZNb+D5VN3GT6N5a/mZaVME+jA==
   dependencies:
     node-fetch "^2.6.7"
 
